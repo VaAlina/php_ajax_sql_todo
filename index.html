@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <title>BeeJee</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/custom.css" />
+<head>
+
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <p><span id="topPanel">Hello, stranger.</span><br/><br/>
+            <button type="button" id="loginButton" class="btn btn-info btn-xs">Press to log in</button>
+        </p>
+    </div>
+
+    <div class="row">
+        <div id="loginWell" class="well well-lg">
+            <form id="LoginForm" action="login.php" title="" method="post" enctype="multipart/form-data">
+                <div>
+                    <div class="col-xs-5">
+                        <input type="text" name="login" class="form-control" placeholder="Login" required />
+                    </div>
+                    <div class="col-xs-5">
+                        <input type="password" name="password" class="form-control" required />
+                    </div>
+                    <div class="col-xs-1">
+                        <input type="submit" id="submitButton"  name="submitButton" value="Submit" class="btn btn-default">
+                    </div>
+                    <div id="cross" class="col-xs-1">
+                        <span id="cancelLogin" class='glyphicon glyphicon glyphicon-remove'></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+        <!--Not adding modal because don't want to fix in jquery code next issue =>  Use of getPreventDefault() is deprecated.  Use defaultPrevented instead.  jquery-1.9.1.js:3346:28
+        ...smth is stopping modal to run. Or smth else was blocking it.-->
+    <div class="row">
+        <h1>BeeJee</h1>
+            <form id="addTaskForm" action="add.php" title="" method="post" enctype="multipart/form-data">
+                <div>
+                    <div class="col-xs-5">
+                        <input type="text" name="task" class="form-control" placeholder="Relax!" required />
+                    </div>
+                    <div class="col-xs-2">
+                        <input type="text" name="name" class="form-control" placeholder="John" required />
+                    </div>
+                    <div class="col-xs-2">
+                        <input type="email" name="email" class="form-control" placeholder="example@gmail.com" required />
+                    </div>
+                    <div class="col-xs-3">  
+                        <!--Don't change code in this group!!! Begine.-->                   
+                        <input type="file" name="img[]" class="file">
+                        <div class="input-group col-xs-12">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-picture"></i>
+                            </span>
+                            <input type="text" class="form-control input-md" disabled placeholder="Upload Image">
+                            <span class="input-group-btn">
+                                <button class="browse btn btn-primary input-md" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+                            </span>
+                            <!--Don't change code in this group!!! End.-->
+                        </div>
+  
+                    </div><br/><br/><br/>
+                    <input type="submit" id="submitButton"  name="submitButton" value="Submit" class="btn btn-primary">
+                    <input type="button"  name="previewTask" value="Preview task" class="btn btn-default">
+            </form>
+            </div>
+    </div>    
+            <hr/> 
+    <div class="row">
+            <table class='table table-hover'>
+                <thead>
+                  <tr>
+                    <th>Task</th>
+                    <th class='sortByName'>Name</th>
+                    <th class='sortByEmail'>Email</th>
+                    <th>Img</th>
+                    <th class='sortByStatus'>Status</th>
+                  </tr>
+                </thead>
+            </table>
+            <div class="tableWrapper">
+                <div id="table"></div>
+            </div>    
+            
+     </div>       
+
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html> 

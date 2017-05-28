@@ -1,0 +1,51 @@
+. /*If I delete this dot the style is crushing. thead is not a class.*/
+thead{
+	position: fixed;
+}
+td, th{
+	text-align: left;
+}
+
+.glyphicon{
+	padding-left: 20px;
+	color: #aaa;
+}
+.glyphicon-pencil:hover{
+	color: #FF8800;
+}
+.glyphicon-remove:hover{
+	color: #CC0000;
+}
+.glyphicon-ok:hover{
+	color: #007E33;
+}
+
+.tableWrapper{
+	overflow: hidden;
+	height: 100px;
+}
+.pagination{
+	position: fixed;
+	bottom: 30px;
+}
+
+.well{
+	min-height: 80px;
+}
+
+.file {
+  visibility: hidden;
+  position: absolute;
+}
+.sortByTask, .sortByName, .sortByEmail{
+	
+}
+
+
+#cross{
+	text-align: right;
+}
+
+#loginWell{
+	display: none;
+}
